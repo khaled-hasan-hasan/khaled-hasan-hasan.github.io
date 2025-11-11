@@ -66,12 +66,33 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections for animation
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(section);
+// document.querySelectorAll('section').forEach(section => {
+//     section.style.opacity = '0';
+//     section.style.transform = 'translateY(20px)';
+//     section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+//     observer.observe(section);
+// });
+// Intersection Observer for fade-in animations (FIXED VERSION)
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Only observe sections AFTER they're loaded
+window.addEventListener('load', function() {
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
 });
+
 
 // Add active state to navigation links based on scroll position
 const sections = document.querySelectorAll('section[id]');
