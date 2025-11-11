@@ -166,26 +166,216 @@
         </div>
     </section>
 
-   <!-- Projects Section - SIMPLE TEST VERSION -->
+  <!-- Projects Section - PROFESSIONAL VERSION -->
 <section class="projects" id="projects">
     <div class="container">
-        <h2 style="color: #1f2937; text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Featured Projects - TEST</h2>
-        <p style="color: #4b5563; text-align: center; margin-bottom: 3rem;">If you see this text, the section structure is fine</p>
-        
-        <!-- Test Project Card -->
-        <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;">
-            <h3 style="color: #2563eb; font-size: 1.8rem; margin-bottom: 1rem;">Test Project 1</h3>
-            <p style="color: #4b5563; line-height: 1.6; margin-bottom: 1rem;">This is a simple test project. If you can read this, the HTML is working correctly.</p>
-            <a href="https://github.com/khaled-hasan-hasan" style="display: inline-block; background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">View on GitHub</a>
-        </div>
-        
-        <!-- Test Project Card 2 -->
-        <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <h3 style="color: #2563eb; font-size: 1.8rem; margin-bottom: 1rem;">Test Project 2</h3>
-            <p style="color: #4b5563; line-height: 1.6;">Another test project to verify the section is displaying properly.</p>
-        </div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">End-to-end data solutions integrating databases, ETL, machine learning, and business intelligence</p>
+
+        <!-- Project 1: ITI Examination System -->
+        <article class="project-card featured-project">
+            <div class="project-badge-container">
+                <span class="featured-badge">⭐ Featured Project</span>
+            </div>
+            
+            <div class="project-header-pro">
+                <h3>ITI Examination Management System</h3>
+                <p class="project-category">Full-Stack Data Engineering Project</p>
+            </div>
+
+            <div class="project-body">
+                <div class="project-summary">
+                    <p><strong>Challenge:</strong> Educational institutions needed a comprehensive examination system integrating automated grading, real-time analytics, and AI support across 12 branches serving 9,000 students.</p>
+                    
+                    <p><strong>Solution:</strong> Built a full-stack data platform with Flask REST API, Gemini AI chatbot, ML prediction models, SSIS ETL pipelines, and interactive Power BI dashboards with 4 analytical views.</p>
+                    
+                    <p><strong>Impact:</strong> Reduced manual processing by 80%, enabled real-time decision-making for 96 instructors, and achieved 85% average attendance rate with automated tracking.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="1.jpg" alt="Executive Summary Dashboard" loading="lazy">
+                    <img src="2.jpg" alt="Student Analytics Dashboard" loading="lazy">
+                    <img src="16.jpg" alt="Attendance Tracking Dashboard" loading="lazy">
+                    <img src="6.jpg" alt="Instructor Performance Dashboard" loading="lazy">
+                    <img src="Diagram.jpg" alt="Database ERD Diagram" loading="lazy">
+                    <img src="DWH_Diagram.jpg" alt="Data Warehouse Schema" loading="lazy">
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">SQL Server</span>
+                    <span class="tech-badge">SSIS</span>
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">DAX</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Gemini API</span>
+                    <span class="tech-badge">REST API</span>
+                    <span class="tech-badge">ETL</span>
+                </div>
+
+                <div class="project-links-pro">
+                    <a href="https://github.com/khaled-hasan-hasan/ITI-Examination-System" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://github.com/khaled-hasan-hasan/ITI-Examination-System#readme" target="_blank" class="btn-docs">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 2: Credit Card Fraud Detection -->
+        <article class="project-card">
+            <div class="project-header-pro">
+                <h3>Credit Card Fraud Detection System</h3>
+                <p class="project-category">Machine Learning & Deep Learning</p>
+            </div>
+
+            <div class="project-body">
+                <div class="project-summary">
+                    <p><strong>Challenge:</strong> Financial institutions lose billions to fraud. Traditional methods fail with severe class imbalance (frauds < 0.2% of transactions).</p>
+                    
+                    <p><strong>Solution:</strong> Developed deep learning models using PyTorch with Focal Loss for imbalance handling, ensemble methods combining Random Forest, Neural Networks, and LDA with optimal threshold tuning.</p>
+                    
+                    <p><strong>Impact:</strong> Achieved 0.95 F1-score (recall) and 0.93 F1 macro average with Neural Network. Random Forest delivered 0.93 F1-score, significantly outperforming baseline methods.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="model_comparison-validation-dataset.jpg" alt="Model Performance Comparison" loading="lazy">
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">Deep Learning</span>
+                    <span class="tech-badge">Focal Loss</span>
+                </div>
+
+                <div class="project-links-pro">
+                    <a href="https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 3: Marketing Campaign Analysis -->
+        <article class="project-card">
+            <div class="project-header-pro">
+                <h3>Marketing Campaign Performance Analysis</h3>
+                <p class="project-category">Data Analysis & Customer Segmentation</p>
+            </div>
+
+            <div class="project-body">
+                <div class="project-summary">
+                    <p><strong>Challenge:</strong> Marketing teams needed data-driven insights on campaign effectiveness across 4 languages and multiple regions to optimize ROI.</p>
+                    
+                    <p><strong>Solution:</strong> Analyzed conversion rates, performed customer segmentation using clustering, and created visualizations identifying high-performing markets and optimization opportunities.</p>
+                    
+                    <p><strong>Impact:</strong> German market showed 0.70% conversion (3.5x average), Arabic 0.50%, enabling data-driven budget allocation saving estimated 40% in marketing spend.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="market_compaign.jpg" alt="Conversion Rate by Language" loading="lazy">
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">Seaborn</span>
+                    <span class="tech-badge">Statistical Analysis</span>
+                </div>
+
+                <div class="project-links-pro">
+                    <a href="https://www.kaggle.com/code/khaledabdo/analyzing-marketing-campaign" target="_blank" class="btn-github">
+                        <i class="fab fa-kaggle"></i> View on Kaggle
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 4: Olympic Games Analytics -->
+        <article class="project-card">
+            <div class="project-header-pro">
+                <h3>Olympic Games Historical Analytics</h3>
+                <p class="project-category">SQL & Database Design</p>
+            </div>
+
+            <div class="project-body">
+                <div class="project-summary">
+                    <p><strong>Challenge:</strong> Analyze 120 years of Olympic data (1896-2016) to uncover athlete performance trends, country dominance patterns, and medal distributions.</p>
+                    
+                    <p><strong>Solution:</strong> Designed normalized database with 4 tables (Athletes, Countries, Summer/Winter Games), implemented complex SQL queries using window functions, CTEs, and multi-dimensional analysis.</p>
+                    
+                    <p><strong>Impact:</strong> Revealed top-performing nations, athlete demographic evolution, sport-specific patterns, and gender participation trends enabling historical insights and predictions.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="ERD_Olympics.jpg" alt="Olympic Database ERD" loading="lazy">
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">SQL Server</span>
+                    <span class="tech-badge">Database Design</span>
+                    <span class="tech-badge">ERD Modeling</span>
+                    <span class="tech-badge">Data Analysis</span>
+                </div>
+
+                <div class="project-links-pro">
+                    <a href="https://github.com/khaled-hasan-hasan/SQL_projects/tree/main/Reporting%20SQL" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 5: Hotel Booking Analysis -->
+        <article class="project-card">
+            <div class="project-header-pro">
+                <h3>Hotel Booking Analysis Dashboard</h3>
+                <p class="project-category">Business Intelligence & Visualization</p>
+            </div>
+
+            <div class="project-body">
+                <div class="project-summary">
+                    <p><strong>Challenge:</strong> Hotel management needed insights on revenue trends, guest preferences, meal/room performance, and seasonal patterns for strategic decisions.</p>
+                    
+                    <p><strong>Solution:</strong> Built Power BI dashboard with star schema, advanced DAX measures for time intelligence, interactive visualizations with drill-through and dynamic filtering across 3 analytical pages.</p>
+                    
+                    <p><strong>Impact:</strong> Enabled real-time revenue tracking, identified high-margin room types, optimized meal offerings, and improved demand forecasting for capacity planning.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="Executive_Sammary.png" alt="Executive Summary" loading="lazy">
+                    <img src="Guests.png" alt="Guest Analysis" loading="lazy">
+                    <img src="Rooms&meals.png" alt="Rooms & Meals Analysis" loading="lazy">
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">DAX</span>
+                    <span class="tech-badge">Power Query</span>
+                    <span class="tech-badge">Star Schema</span>
+                    <span class="tech-badge">Data Modeling</span>
+                </div>
+
+                <div class="project-links-pro">
+                    <a href="https://github.com/khaled-hasan-hasan/Hotel-BI-Project" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </article>
+
     </div>
 </section>
+
 
 
     <!-- Certifications Section -->
