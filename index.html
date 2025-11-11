@@ -90,7 +90,7 @@
                             <i class="fas fa-project-diagram"></i>
                             <div>
                                 <h4>Projects</h4>
-                                <p>4+ End-to-End<br>Data Solutions</p>
+                                <p>5+ End-to-End<br>Data Solutions</p>
                             </div>
                         </div>
                     </div>
@@ -166,170 +166,350 @@
         </div>
     </section>
 
- /* ==================== PROJECTS SECTION ==================== */
-.projects {
-    padding: 4rem 0;
-    background-color: #f9fafb;  /* Light gray background - NOT white */
-    min-height: 100vh;
-}
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">End-to-end data solutions integrating databases, ETL, machine learning, and business intelligence</p>
 
-.project-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 3rem;
-    overflow: hidden;
-    transition: all 0.25s ease-in-out;
-    border: 1px solid #e5e7eb;
-    /* CRITICAL: Remove any opacity or display:none */
-    opacity: 1 !important;
-    visibility: visible !important;
-}
+            <!-- Project 1: ITI Examination System -->
+            <article class="project-card featured">
+                <div class="project-header">
+                    <div>
+                        <h3>ITI Examination Management System</h3>
+                        <p class="project-type">Full-Stack Data Engineering Project</p>
+                    </div>
+                    <span class="project-badge">Featured</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+                        <p>
+                            Educational institutions need comprehensive examination management systems that integrate automated grading, 
+                            real-time analytics, attendance tracking, and intelligent support for students and instructors across multiple branches.
+                        </p>
+                        
+                        <h4><i class="fas fa-wrench"></i> Solution & Implementation</h4>
+                        <ul>
+                            <li><strong>Flask REST API</strong> with role-based authentication serving students, instructors, and managers with secure endpoints</li>
+                            <li><strong>AI Chatbot</strong> powered by Gemini API for intelligent student support, answering queries about exams, courses, and schedules</li>
+                            <li><strong>ML Grade Prediction Models</strong> using scikit-learn to forecast student performance and identify at-risk students</li>
+                            <li><strong>SSIS ETL Pipelines</strong> for automated attendance data processing, transformation, and loading into data warehouse</li>
+                            <li><strong>Power BI Dashboards</strong> with 4 comprehensive views: Executive Summary, Student Analytics, Attendance Tracking, and Instructor Performance</li>
+                            <li><strong>Automated MCQ Grading</strong> system with instant feedback delivery and detailed performance analytics</li>
+                            <li><strong>Complex Database Design</strong> with 15+ normalized tables supporting multi-branch, multi-track academic structure</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-chart-bar"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Automated examination workflow reducing manual processing time by <strong>80%</strong></li>
+                            <li>Real-time insights enabling data-driven decision making for 96 instructors across 12 branches</li>
+                            <li>Integrated AI assistant improving student engagement with <strong>24/7 support availability</strong></li>
+                            <li>Attendance tracking system monitoring 9,000 students with <strong>85% average attendance rate</strong></li>
+                            <li>Data warehouse supporting complex OLAP queries for trend analysis and predictive modeling</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="project-images">
+                            <img src="1.jpg" alt="ITI Examination System Executive Summary">
+                            <img src="2.jpg" alt="Student Overview Dashboard">
+                            <img src="16.jpg" alt="Attendance Analysis Dashboard">
+                            <img src="6.jpg" alt="Instructor Performance Dashboard">
+                            <img src="Diagram.jpg" alt="Database ERD Diagram">
+                            <img src="DWH_Diagram.jpg" alt="Data Warehouse Star Schema">
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">SSIS</span>
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Data Warehouse</span>
+                        <span class="tech-tag">ETL</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/khaled-hasan-hasan/ITI-Examination-System" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                        <a href="https://github.com/khaled-hasan-hasan/ITI-Examination-System#readme" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-book"></i> Documentation
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-.project-card:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
+            <!-- Project 2: Credit Card Fraud Detection -->
+            <article class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3>Credit Card Fraud Detection System</h3>
+                        <p class="project-type">Machine Learning & Deep Learning Project</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+                        <p>
+                            Financial institutions face significant losses from fraudulent transactions. Traditional detection methods struggle 
+                            with severe class imbalance where fraudulent transactions represent less than 0.2% of all transactions, leading to 
+                            high false positive rates and missed fraud cases.
+                        </p>
+                        
+                        <h4><i class="fas fa-wrench"></i> Solution & Implementation</h4>
+                        <ul>
+                            <li><strong>Advanced Class Imbalance Handling</strong> using Focal Loss to focus model learning on hard-to-classify fraud cases</li>
+                            <li><strong>Deep Learning Models</strong> built with PyTorch including Neural Networks with optimal threshold tuning for precision-recall balance</li>
+                            <li><strong>Ensemble Methods</strong> combining Random Forest, Logistic Regression, and Linear Discriminant Analysis for robust predictions</li>
+                            <li><strong>Feature Engineering</strong> extracting temporal and behavioral patterns from transaction sequences and amounts</li>
+                            <li><strong>Model Optimization</strong> through hyperparameter tuning achieving F1-scores above 0.90 across all models</li>
+                            <li><strong>Comprehensive Evaluation</strong> using multiple metrics: F1-score, Precision, Recall, PR-AUC for imbalanced data</li>
+                            <li><strong>Threshold Optimization</strong> identifying optimal decision boundaries for each model to maximize business value</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-chart-bar"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Neural Network achieved <strong>F1-score of 0.95 (recall) and 0.93 (F1 macro avg)</strong> on validation dataset</li>
+                            <li>Random Forest delivered <strong>0.93 F1-score with 0.90 recall</strong>, balancing precision and fraud detection</li>
+                            <li>Reduced false positive rate while maintaining high fraud detection accuracy across all model variants</li>
+                            <li>Scalable architecture capable of processing real-time transaction streams with sub-second latency</li>
+                            <li>Comparative analysis showing Neural Network with optimal threshold outperforming traditional methods</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="project-images">
+                            <img src="model_comparison-validation-dataset.jpg" alt="Model Performance Comparison Heatmap">
+                        </div>
+                        <p class="image-caption">Model Performance Comparison: F1-Score, Precision, Recall, and PR-AUC across all algorithms</p>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Focal Loss</span>
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">Neural Networks</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                        <a href="https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection#readme" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-chart-bar"></i> View Results
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-.project-card.featured {
-    border: 2px solid #2563eb;
-}
+            <!-- Project 3: Marketing Campaign Analysis -->
+            <article class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3>Marketing Campaign Performance Analysis</h3>
+                        <p class="project-type">Data Analysis & Customer Segmentation Project</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+                        <p>
+                            Marketing teams need data-driven insights to evaluate campaign effectiveness across multiple languages and regions, 
+                            understand customer behavior patterns, and optimize future marketing strategies for better ROI and conversion rates.
+                        </p>
+                        
+                        <h4><i class="fas fa-wrench"></i> Solution & Implementation</h4>
+                        <ul>
+                            <li><strong>Comprehensive Data Analysis</strong> of marketing campaign performance across 4 languages (Arabic, English, German, Spanish)</li>
+                            <li><strong>Conversion Rate Optimization</strong> analyzing language-specific performance with German achieving <strong>0.70% conversion rate</strong></li>
+                            <li><strong>Customer Segmentation</strong> using clustering algorithms to identify distinct behavioral groups and high-value segments</li>
+                            <li><strong>ROI Analysis</strong> calculating return on investment for different campaign strategies and marketing channels</li>
+                            <li><strong>Statistical Testing</strong> to validate effectiveness of language-specific approaches and campaign timing</li>
+                            <li><strong>Rich Visualizations</strong> using Matplotlib and Seaborn including bar charts and performance comparisons</li>
+                            <li><strong>Actionable Recommendations</strong> identifying German market as priority with 3.5x higher conversion than average</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-chart-bar"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Identified <strong>German-speaking market as highest performing</strong> with 0.70% conversion vs 0.20% average</li>
+                            <li>Discovered Arabic market (0.50%) and Spanish market (0.20%) as secondary growth opportunities</li>
+                            <li>Provided <strong>data-driven budget allocation recommendations</strong> prioritizing high-performing language segments</li>
+                            <li>Created actionable insights on optimal campaign timing, messaging localization, and channel selection</li>
+                            <li>English market showed lowest performance (0.13%) indicating need for strategy revision</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="project-images">
+                            <img src="market_compaign.jpg" alt="Conversion Rate by Language Analysis">
+                        </div>
+                        <p class="image-caption">Conversion Rate by Language: German leads with 0.70%, followed by Arabic (0.50%), Spanish (0.20%), and English (0.13%)</p>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">Statistical Analysis</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">ROI Analysis</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://www.kaggle.com/code/khaledabdo/analyzing-marketing-campaign" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-kaggle"></i> View on Kaggle
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-.project-header {
-    background: linear-gradient(135deg, #2563eb, #0891b2);
-    color: #ffffff;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+            <!-- Project 4: Olympic Games Analytics -->
+            <article class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3>Olympic Games Historical Analytics</h3>
+                        <p class="project-type">SQL & Database Design Project</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+                        <p>
+                            Analyzing 120 years of Olympic Games data (1896-2016) to uncover insights about athlete performance, country dominance, 
+                            seasonal trends, and medal distributions across summer and winter games, requiring robust database design and complex SQL queries.
+                        </p>
+                        
+                        <h4><i class="fas fa-wrench"></i> Solution & Implementation</h4>
+                        <ul>
+                            <li><strong>Comprehensive Database Design</strong> with 4 normalized tables: Athletes, Countries, Summer/Winter Games with proper foreign keys</li>
+                            <li><strong>Advanced SQL Queries</strong> utilizing window functions, aggregations, CTEs, and joins for complex analytics</li>
+                            <li><strong>Historical Trend Analysis</strong> tracking medal counts, athlete demographics, and country performance over 120 years</li>
+                            <li><strong>Multi-dimensional Analysis</strong> across sport types, events, countries, and athlete characteristics (age, gender, height, weight)</li>
+                            <li><strong>Country Performance Metrics</strong> calculating total medals, GDP correlation, and population-adjusted success rates</li>
+                            <li><strong>Seasonal Comparison</strong> analyzing differences between Summer and Winter Olympics participation and medal distribution</li>
+                            <li><strong>Data Quality Validation</strong> ensuring referential integrity and handling missing values in historical data</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-chart-bar"></i> Key Outcomes</h4>
+                        <ul>
+                            <li>Discovered <strong>top performing nations</strong> and their dominance patterns across different sports and time periods</li>
+                            <li>Identified <strong>athlete demographic trends</strong> showing evolution in age, height, and weight profiles over decades</li>
+                            <li>Revealed <strong>sport-specific performance patterns</strong> highlighting regional strengths and competitive dynamics</li>
+                            <li>Generated insights into <strong>emerging nations</strong> and their growth trajectories in Olympic medal standings</li>
+                            <li>Analyzed <strong>gender participation evolution</strong> showing increasing female athlete representation over time</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="project-images">
+                            <img src="ERD_Olympics.jpg" alt="Olympic Games Database ERD">
+                        </div>
+                        <p class="image-caption">Normalized Database Schema: Athletes, Countries, Summer Games, and Winter Games with relational integrity</p>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">ERD Modeling</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Window Functions</span>
+                        <span class="tech-tag">Aggregations</span>
+                        <span class="tech-tag">Historical Analysis</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/khaled-hasan-hasan/SQL_projects/tree/main/Reporting%20SQL" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-.project-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #ffffff;
-}
+            <!-- Project 5: Hotel Booking Analysis -->
+            <article class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3>Hotel Booking Analysis Dashboard</h3>
+                        <p class="project-type">Business Intelligence & Visualization Project</p>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4><i class="fas fa-bullseye"></i> Problem Statement</h4>
+                        <p>
+                            Analyzing hotel booking data to understand revenue trends, guest preferences, meal and room type performance, 
+                            and seasonal patterns for strategic decision-making in hospitality management.
+                        </p>
+                        
+                        <h4><i class="fas fa-wrench"></i> Solution & Implementation</h4>
+                        <ul>
+                            <li><strong>Data Modeling</strong> designing efficient star schema for OLAP analytics with fact and dimension tables</li>
+                            <li><strong>Power Query</strong> for comprehensive data cleaning, transformation, and handling missing/inconsistent values</li>
+                            <li><strong>Advanced DAX Measures</strong> for complex calculations including time intelligence, year-over-year comparisons, and KPIs</li>
+                            <li><strong>Interactive Visualizations</strong> with drill-through capabilities, slicers, and dynamic filtering across multiple pages</li>
+                            <li><strong>User-Friendly Interface</strong> designed for non-technical stakeholders with intuitive navigation and clear insights</li>
+                            <li><strong>Performance Optimization</strong> using aggregations and query folding for fast dashboard load times</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-chart-bar"></i> Key Features</h4>
+                        <ul>
+                            <li>Executive summary page with <strong>revenue KPIs, booking trends, and occupancy rates</strong></li>
+                            <li>Guest analysis revealing <strong>booking patterns, demographics, and customer segments</strong></li>
+                            <li>Room and meal type performance comparisons identifying <strong>high-margin offerings</strong></li>
+                            <li>Seasonal trend analysis for <strong>demand forecasting and capacity planning</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-media">
+                        <video controls muted>
+                            <source src="2025-11-11 13-55-52.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="project-images">
+                            <img src="Executive_Sammary.png" alt="Executive Summary Dashboard">
+                            <img src="Guests.png" alt="Guest Analysis Dashboard">
+                            <img src="Rooms&meals.png" alt="Rooms and Meals Dashboard">
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Power Query</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Star Schema</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Time Intelligence</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/khaled-hasan-hasan/Hotel-BI-Project" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-.project-type {
-    font-size: 1rem;
-    opacity: 0.9;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.project-badge {
-    background-color: #f59e0b;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.project-content {
-    padding: 3rem;
-}
-
-.project-description h4 {
-    font-size: 1.2rem;
-    color: #2563eb;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.project-description h4:first-child {
-    margin-top: 0;
-}
-
-.project-description p {
-    color: #4b5563;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.project-description ul {
-    list-style: none;
-    margin-bottom: 1.5rem;
-    padding-left: 0;
-}
-
-.project-description li {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    color: #4b5563;
-    line-height: 1.7;
-}
-
-.project-description li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: #2563eb;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.project-media {
-    margin: 3rem 0;
-}
-
-.project-media video {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.project-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.25s ease-in-out;
-}
-
-.project-images img:hover {
-    transform: scale(1.03);
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e5e7eb;
-}
-
-.tech-tag {
-    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
-    color: #1e40af;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid rgba(37, 99, 235, 0.2);
-}
-
-.project-links {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
+        </div>
+    </section>
 
     <!-- Certifications Section -->
     <section class="certifications" id="certifications">
