@@ -4,77 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Khaled Hasan</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
-        .container { max-width: 900px; margin: 30px auto; padding: 30px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #007bff; margin-bottom: 10px; }
-        h2 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
-        h3 { color: #007bff; margin-bottom: 10px; }
-        p { color: #555; margin-bottom: 15px; }
-        .about-section p { text-align: center; font-size: 1.1em; }
-        .project { margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px dashed #eee; }
-        .project-media { text-align: center; margin-top: 20px; }
-        .project-media img, .project-media video {
-            max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;
-        }
-        .links { margin-top: 20px; text-align: center; }
-        .links a { text-decoration: none; background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; margin: 0 10px; display: inline-block; transition: background-color 0.3s ease; }
-        .links a:hover { background-color: #218838; }
-        .contact-info { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        
-        <div class="about-section">
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">[Khaled Hasan]</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header" id="about">
+        <div class="container">
             <h1>Khaled Hasan</h1>
-            <p>Data Analyst | BI Engineer | SQL & Power BI Specialist</p>
-            <p>
+            <p class="subtitle">Data Analyst | BI Engineer | SQL & Power BI Specialist</p>
+            <p class="about-text">
                 Welcome to my portfolio. I am passionate about transforming complex data into actionable insights that help businesses make smarter decisions.
             </p>
-        </div>
-
-        <hr>
-
-        <h2>My Featured Projects</h2>
-
-        <div class="project">
-            <h3>Hotel Booking Analysis Dashboard</h3>
-            <p>
-                <strong>The Problem:</strong> Analyzing hotel booking data to understand trends in revenue, guest preferences, and meal/room type performance.
-            </p>
-            <p>
-                <strong>My Role:</strong> I designed and built this dashboard from scratch using Power BI. My work involved data modeling, cleaning (Power Query), creating DAX measures, and designing a user-friendly interface to present key insights.
-            </p>
-            <p>
-                <strong>Tools Used:</strong> Power BI (Power Query, DAX), Excel.
-            </p>
             
-            <div class="project-media">
-                <video src="2025-11-11 13-55-52.mp4" alt="Demo video of the dashboard" controls style="max-width: 100%;">
-                    Your browser does not support the video tag.
-                </video>
+            <h3>Key Skills</h3>
+            <div class="skills-container">
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">DAX</span>
+                <span class="skill-tag">Power Query</span>
+                <span class="skill-tag">Data Warehousing</span>
+                <span class="skill-tag">SSIS</span>
+                <span class="skill-tag">Python</span>
+            </div>
+        </div>
+    </header>
 
-                <img src="Executive_Sammary.png" alt="Executive Summary Page">
-                <img src="Guests.png" alt="Guests Analysis Page">
-                <img src="Rooms&meals.png" alt="Rooms and Meals Analysis Page">
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2>My Featured Projects</h2>
+
+            <div class="project-card">
+                <h3>Hotel Booking Analysis Dashboard</h3>
+                <p><strong>The Problem:</strong> Analyzing hotel booking data to understand trends in revenue, guest preferences, and meal/room type performance.</p>
+                <p><strong>My Role:</strong> I designed and built this dashboard from scratch using Power BI. My work involved data modeling, cleaning (Power Query), creating DAX measures, and designing a user-friendly interface to present key insights.</p>
                 
-                <p style="font-style: italic; font-size: 0.9em; color: #777;">
-                    (Note: Screenshots and video are displayed due to data privacy.)
-                </p>
+                <div class="project-media">
+                    <video controls muted>
+                        <source src="2025-11-11 13-55-52.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="Executive_Sammary.png" alt="Executive Summary Page">
+                    <img src="Guests.png" alt="Guests Analysis Page">
+                    <img src="Rooms&meals.png" alt="Rooms and Meals Analysis Page">
+                    <p class="note">(Screenshots and video are displayed due to data privacy.)</p>
+                </div>
+
+                <div class="project-tags">
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                    <span>Data Modeling</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/khaled-hasan-hasan/Hotel-BI-Project" target="_blank" class="btn">View Source Code</a>
+                </div>
             </div>
 
-            <div class="links">
-                <a href="https://github.com/khaled-hasan-hasan/Hotel-BI-Project" target="_blank">View Source Code (GitHub)</a>
             </div>
-        </div>
+    </section>
 
-        <div class="contact-info">
+    <footer class="contact-footer" id="contact">
+        <div class="container">
             <h2>Get In Touch</h2>
-            <p>Email: <a href="mailto:khaled.habdo@gmail.com">khaled.habdo@gmail.com</a></p>
-            <p>LinkedIn: <a href="www.linkedin.com/in/khaled-hasan-abdo" target="_blank">www.linkedin.com/in/khaled-hasan-abdo</a></p>
+            <p>I'm always open to discussing new projects or opportunities.</p>
+            <p>
+                Email: <a href="mailto:khaled.habdo@gmail.com">khaled.habdo@gmail.com</a>
+                <br>
+                LinkedIn: <a href="[www.linkedin.com/in/khaled-hasan-abdo]" target="_blank">www.linkedin.com/in/khaled-hasan-abdo</a>
+            </p>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>
