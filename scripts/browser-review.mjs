@@ -42,6 +42,12 @@ try {
       const layout = await page.evaluate(() => ({ viewport: innerWidth, body: document.body.scrollWidth, html: document.documentElement.scrollWidth, images: [...document.images].filter(image => image.loading !== 'lazy' && (!image.complete || image.naturalWidth === 0)).map(image => image.src) }));
       assert.ok(Math.max(layout.body, layout.html) <= layout.viewport + 1, `${width}px ${file}: horizontal overflow ${JSON.stringify(layout)}`);
       assert.deepEqual(layout.images, [], `${file}: eager images load`);
+      if (file === 'index.html') {
+        const caption = await page.locator('.report-caption p').boundingBox();
+        const note = await page.locator('.pipeline-note').boundingBox();
+        const overlap = caption.x < note.x + note.width && caption.x + caption.width > note.x && caption.y < note.y + note.height && caption.y + caption.height > note.y;
+        assert.equal(overlap, false, `${width}px: hero note must not obscure the report caption`);
+      }
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.getByRole('link', { name: '', exact: true }).count(), 0, `${file}: all links have an accessible name`);
       report.pages.push({ file, width, status: response.status(), horizontalOverflow: false });

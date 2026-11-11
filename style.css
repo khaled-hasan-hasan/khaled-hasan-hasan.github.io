@@ -352,7 +352,7 @@ img,video {
 }
 .hero-art {
   position:relative;
-  padding:30px 0 66px 12px;
+  padding:30px 0 110px 12px;
   min-width:0
 }
 .hero-art:before {
@@ -1678,7 +1678,7 @@ form>.button {
     max-width:590px;
     margin:10px auto 0;
     width:100%;
-    padding:30px 15px 70px
+    padding:30px 15px 110px
   }
   .report-caption p {
     font-size:34px
@@ -1966,7 +1966,7 @@ form>.button {
   }
   .hero-art {
     margin-top:17px;
-    padding:25px 6px 70px
+    padding:25px 6px 110px
   }
   .report-frame {
     padding:12px;
