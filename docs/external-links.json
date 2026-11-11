@@ -1,0 +1,70 @@
+{
+  "checked_date": "2026-11-11",
+  "links": [
+    {
+      "url": "https://github.com/khaled-hasan-hasan",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection/blob/main/credit_fraud_utils_eval.py",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/Credit_Card_Fraud_Detection/blob/main/credit_fraud_utils_eval.py",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System/blob/main/docs/etl_workflow.md",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System/blob/main/docs/etl_workflow.md",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System/blob/main/sql/script_DWH.sql",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/ITI-Examination-System/blob/main/sql/script_DWH.sql",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/Python-Data-Analysis-Projects",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/Python-Data-Analysis-Projects",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/SQL_projects/blob/main/Reporting%20SQL/Some%20Analysis%20with%20Postgresql/reporting%20sql%20postgresql.sql",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/SQL_projects/blob/main/Reporting%20SQL/Some%20Analysis%20with%20Postgresql/reporting%20sql%20postgresql.sql",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://github.com/khaled-hasan-hasan/SQL_projects/tree/main/Reporting%20SQL",
+      "status": 200,
+      "final_url": "https://github.com/khaled-hasan-hasan/SQL_projects/tree/main/Reporting%20SQL",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://www.kaggle.com/code/khaledabdo/analyzing-marketing-campaign",
+      "status": 200,
+      "final_url": "https://www.kaggle.com/code/khaledabdo/analyzing-marketing-campaign",
+      "result": "reachable; content not fully verified"
+    },
+    {
+      "url": "https://www.linkedin.com/in/khaled-hasan-abdo",
+      "status": 999,
+      "result": "manual check required: bot/access response"
+    }
+  ]
+}
