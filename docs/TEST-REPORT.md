@@ -1,4 +1,6 @@
-# Test and performance report
+# Initial local test and performance report
+
+This is the preserved initial local result. The handoff workflow may add a newer actual Chromium/Lighthouse result under `browser-qa/` in the downloadable review artifact; use its summary and raw reports for CI measurements.
 
 11 November 2026. Review branch: `feature/premium-analytics-portfolio`. Results apply to local generated artifacts, not a deployed site. No public/staging deployment was made.
 

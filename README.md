@@ -1,6 +1,6 @@
 # SmartDataVisions — Khaled Hasan
 
-A service-focused, static data analytics portfolio, redesigned on `feature/premium-analytics-portfolio`. The original production branch, history, root CNAME and DNS are unchanged. No site has been published and no remote branch or PR has been created.
+A service-focused, static data analytics portfolio, redesigned on `feature/premium-analytics-portfolio`. The original production branch, history, root CNAME and DNS are unchanged. The feature branch is pushed and draft PR #1 is open: https://github.com/khaled-hasan-hasan/khaled-hasan-hasan.github.io/pull/1. No site has been published or merged.
 
 ## Build
 
@@ -26,11 +26,11 @@ Open `dist/index.html` directly, or run this on your own computer:
 python3 -m http.server 8000 --directory dist --bind 127.0.0.1
 ```
 
-Then visit `http://127.0.0.1:8000`. `npm run preview` is a convenience alias. In a managed Sites environment, use the supported managed preview/browser tools instead. This session could not run browser QA because its shared browser control tool was absent.
+Then visit `http://127.0.0.1:8000`. `npm run preview` is a convenience alias. In a managed Sites environment, use the supported managed preview/browser tools instead. The shared browser control tool is absent in this session. A non-deploying GitHub Actions workflow now runs real Chromium/Lighthouse on an isolated localhost preview and uploads its actual results with the review package.
 
 ## Validate
 
-Static checks need only Python. DOM interaction tests use Node 22+ and one development-only dependency, locked in package-lock.json:
+Static checks need only Python. DOM interaction tests use Node 22+ and development-only QA dependencies, locked in package-lock.json:
 
 ```sh
 npm ci --ignore-scripts
@@ -63,4 +63,8 @@ All five existing projects remain accessible. Metrics and customer outcomes are 
 - [Free hosting migration](docs/MIGRATION.md)
 - [Draft PR description](docs/PR-DRAFT.md)
 
-No screenshots or Lighthouse scores are claimed. Complete browser, mail-client and deployed-host verification before public launch. The site is review-ready source, not a verified live deployment.
+The initial local test report predates the CI browser run. See the downloadable `browser-qa/summary.json`, screenshots and Lighthouse reports for actual CI results; do not infer a pass from source alone. Complete human visual, mail-client and deployed-host verification before public launch. The site is review-ready source, not a verified live deployment.
+
+## Accessible review handoff
+
+See [exact local launch/navigation instructions](docs/LOCAL-REVIEW.md) and the [unexecuted Cloudflare staging plan](docs/STAGING-PLAN.md). The `Review checks and downloadable artifacts` workflow runs only for feature-branch pushes and has no deployment permission or step. It preserves the three original redesign commits and provides 30-day downloadable review/browser/website artifacts; save a local copy.

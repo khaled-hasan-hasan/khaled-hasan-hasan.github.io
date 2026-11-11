@@ -6,9 +6,12 @@
   "scripts": {
     "build": "python3 scripts/build.py",
     "check": "python3 scripts/check.py && node --test tests/interactions.test.cjs",
-    "preview": "python3 -m http.server 8000 --directory dist --bind 127.0.0.1"
+    "preview": "python3 -m http.server 8000 --directory dist --bind 127.0.0.1",
+    "browser:review": "node scripts/browser-review.mjs"
   },
   "devDependencies": {
-    "happy-dom": "^21.0.4"
+    "happy-dom": "^21.0.4",
+    "lighthouse": "13.6.0",
+    "playwright": "1.65.0"
   }
 }

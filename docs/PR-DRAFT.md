@@ -1,4 +1,6 @@
-# Draft PR — not submitted
+# Draft PR #1
+
+https://github.com/khaled-hasan-hasan/khaled-hasan-hasan.github.io/pull/1
 
 Title: Rebuild SmartDataVisions around scoped analytics services and inspectable project work
 
@@ -14,4 +16,4 @@ Owner review: credential status, LinkedIn slug, dataset/media permission, Hotel 
 
 ## Review boundary
 
-Feature branch is local. Push, PR creation, production merge and publication have not been performed. This file is a ready-to-use description, not an existing GitHub pull request. Use a draft PR only after the owner authorizes pushing this branch and opening it. Do not add an automatic deployment workflow that publishes unapproved changes.
+The owner authorized pushing the feature branch and opening draft PR #1. The three original commits remain unchanged; handoff changes are additional commits. Production merge and publication have not been performed. The artifact workflow builds/tests and uploads downloads; it does not deploy. Do not add an automatic deployment workflow that publishes unapproved changes.
