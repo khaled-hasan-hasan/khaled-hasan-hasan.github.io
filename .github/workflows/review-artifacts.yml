@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: npm
@@ -41,7 +41,7 @@ jobs:
           python3 scripts/verify-review.py review-artifacts/SmartDataVisions-review-package.zip
       - name: Upload complete review package
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: SmartDataVisions-review-package
           path: review-artifacts/smartdatavisions-review/
@@ -50,7 +50,7 @@ jobs:
           retention-days: 30
       - name: Upload browser screenshots and raw Lighthouse reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: SmartDataVisions-browser-QA
           path: review-artifacts/browser-qa/
@@ -58,7 +58,7 @@ jobs:
           retention-days: 30
       - name: Upload standalone static website
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: SmartDataVisions-website
           path: dist/

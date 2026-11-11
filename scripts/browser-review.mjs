@@ -43,6 +43,7 @@ try {
       assert.ok(Math.max(layout.body, layout.html) <= layout.viewport + 1, `${width}px ${file}: horizontal overflow ${JSON.stringify(layout)}`);
       assert.deepEqual(layout.images, [], `${file}: eager images load`);
       assert.equal(await page.locator('h1').count(), 1);
+      assert.equal(await page.getByRole('link', { name: '', exact: true }).count(), 0, `${file}: all links have an accessible name`);
       report.pages.push({ file, width, status: response.status(), horizontalOverflow: false });
       if ([390, 1440].includes(width) && ['index.html', 'services.html', 'work.html', 'contact.html', 'case-studies/hotel-booking.html'].includes(file)) {
         // Eager-load below-fold images before a genuine full-page capture.
