@@ -1,0 +1,14 @@
+{
+  "name": "smartdatavisions-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Dependency-free static analytics portfolio for Khaled Hasan",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/check.py && node --test tests/interactions.test.cjs",
+    "preview": "python3 -m http.server 8000 --directory dist --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "happy-dom": "^21.0.4"
+  }
+}

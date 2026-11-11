@@ -1,0 +1,92 @@
+{
+  "hotel-overview": {
+    "width": 971,
+    "height": 565,
+    "original": "Executive_Sammary.png"
+  },
+  "hotel-guests": {
+    "width": 931,
+    "height": 525,
+    "original": "Guests.png"
+  },
+  "hotel-rooms": {
+    "width": 931,
+    "height": 522,
+    "original": "Rooms&meals.png"
+  },
+  "exam-overview": {
+    "width": 1440,
+    "height": 1113,
+    "original": "1.jpg"
+  },
+  "exam-students": {
+    "width": 1440,
+    "height": 1113,
+    "original": "2.jpg"
+  },
+  "exam-instructors": {
+    "width": 1440,
+    "height": 1113,
+    "original": "6.jpg"
+  },
+  "exam-attendance": {
+    "width": 1440,
+    "height": 1113,
+    "original": "16.jpg"
+  },
+  "exam-erd": {
+    "width": 624,
+    "height": 495,
+    "original": "ERD_Examination.jpeg"
+  },
+  "exam-warehouse": {
+    "width": 1063,
+    "height": 790,
+    "original": "DWH_Diagram.jpg"
+  },
+  "exam-login": {
+    "width": 897,
+    "height": 486,
+    "original": "login_page.jpeg"
+  },
+  "exam-ai": {
+    "width": 1176,
+    "height": 645,
+    "original": "ai_page.jpeg"
+  },
+  "exam-prediction": {
+    "width": 1201,
+    "height": 569,
+    "original": "lr_page.jpeg"
+  },
+  "exam-chatbot": {
+    "width": 897,
+    "height": 567,
+    "original": "chatbot_page.jpeg"
+  },
+  "olympics-model": {
+    "width": 1440,
+    "height": 783,
+    "original": "ERD_Olympics.jpg"
+  },
+  "fraud-comparison": {
+    "width": 1440,
+    "height": 900,
+    "original": "model_comparison-(validation dataset).jpg"
+  },
+  "marketing-notebook": {
+    "width": 1221,
+    "height": 543,
+    "original": "market compaign.png"
+  },
+  "marketing-languages": {
+    "width": 666,
+    "height": 483,
+    "original": "market_compaign.jpg"
+  },
+  "exam-relational-model": {
+    "width": 821,
+    "height": 617,
+    "original": "Diagram.png"
+  }
+}

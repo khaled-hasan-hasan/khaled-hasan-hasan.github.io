@@ -1,105 +1,95 @@
-// Mobile Navigation Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+/* Progressive enhancement only. Content, navigation and direct email work without JS. */
+(() => {
+  'use strict';
+  const toggle = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('#navigation');
+  if (toggle && navigation) {
+    const mobile = window.matchMedia('(max-width: 620px)');
+    const setOpen = (open) => {
+      navigation.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    document.documentElement.classList.add('js-menu');
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) setOpen(false);
     });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
     });
-}
+    mobile.addEventListener('change', () => setOpen(false));
+    // The menu toggle is useful only on small screens; CSS also keeps it out of desktop layout.
+    const updateToggle = () => { toggle.hidden = !mobile.matches; };
+    updateToggle();
+    mobile.addEventListener('change', updateToggle);
+  }
 
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navHeight = navbar.offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+  const filters = document.querySelector('.filters');
+  if (filters) {
+    const cards = Array.from(document.querySelectorAll('#project-grid [data-category]'));
+    const count = document.querySelector('#project-count');
+    const status = document.querySelector('#filter-status');
+    filters.hidden = false;
+    filters.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-filter]');
+      if (!button) return;
+      const selected = button.dataset.filter;
+      let visible = 0;
+      cards.forEach((card) => {
+        card.hidden = selected !== 'all' && card.dataset.category !== selected;
+        if (!card.hidden) visible += 1;
+      });
+      filters.querySelectorAll('button').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      count.textContent = String(visible);
+      status.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} shown. Filter: ${button.textContent}.`;
     });
-});
+  }
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+  const copyButton = document.querySelector('.copy-email');
+  if (copyButton && navigator.clipboard && window.isSecureContext) {
+    copyButton.hidden = false;
+    copyButton.addEventListener('click', async () => {
+      const status = document.querySelector('#copy-status');
+      try {
+        await navigator.clipboard.writeText(copyButton.dataset.email);
+        status.textContent = 'Email address copied.';
+      } catch {
+        status.textContent = 'Copy was unavailable. Select and copy the email address above.';
+      }
     });
-}, observerOptions);
+  }
 
-// Observe all sections for animation
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(section);
-});
-
-// Add active state to navigation links based on scroll position
-const sections = document.querySelectorAll('section[id]');
-
-function highlightNavigation() {
-    const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink?.classList.add('active');
-        } else {
-            navLink?.classList.remove('active');
-        }
+  const composer = document.querySelector('#email-composer');
+  const form = document.querySelector('#inquiry-form');
+  if (composer && form) {
+    composer.hidden = false;
+    const draft = document.querySelector('#email-draft');
+    const status = document.querySelector('#draft-status');
+    form.addEventListener('input', () => {
+      draft.hidden = true;
+      draft.removeAttribute('href');
+      status.textContent = '';
     });
-}
-
-window.addEventListener('scroll', highlightNavigation);
-
-// Video lazy loading
-document.querySelectorAll('video').forEach(video => {
-    video.setAttribute('loading', 'lazy');
-});
-
-// Console message
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #2563eb; font-weight: bold;');
-console.log('%cInterested in the code? Check out my GitHub: https://github.com/khaled-hasan-hasan', 'font-size: 14px; color: #4b5563;');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const service = form.elements.service.value;
+      const timeline = form.elements.timeline.value.trim();
+      const brief = form.elements.brief.value.trim();
+      if (brief.length < 15) {
+        status.textContent = 'Please include at least 15 characters of project context.';
+        form.elements.brief.focus();
+        return;
+      }
+      const body = `Hi Khaled,\n\nI would like to discuss ${service.toLowerCase()}.\n\n${brief}\n\nTarget date: ${timeline || 'To be discussed'}\n\nThanks,`;
+      draft.href = `mailto:khaled.habdo@gmail.com?subject=${encodeURIComponent(`Project inquiry — ${service}`)}&body=${encodeURIComponent(body)}`;
+      draft.hidden = false;
+      status.textContent = 'Draft prepared below. Open it in your email app to review and send. Nothing has been submitted.';
+      draft.focus();
+    });
+  }
+})();
