@@ -102,7 +102,7 @@ try {
   assert.equal(await noJSPage.locator('#project-grid article:visible').count(), 5);
   assert.equal(await noJSPage.locator('#navigation a:visible').count(), 4);
   await noJSPage.goto(`${origin}/contact.html`);
-  assert.equal(await noJSPage.locator('a[href="mailto:khaled.habdo@gmail.com"]').count(), 1);
+  assert.equal(await noJSPage.locator('.email-address[href="mailto:khaled.habdo@gmail.com"]').count(), 1);
   assert.equal(await noJSPage.locator('#email-composer').isVisible(), false);
   await noJS.close();
   report.interactions.push({ mode: 'JavaScript disabled', passed: ['five projects visible', 'mobile navigation visible', 'direct email link present', 'optional composer hidden'] });
