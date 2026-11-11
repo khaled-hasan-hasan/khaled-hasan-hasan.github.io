@@ -116,7 +116,8 @@ try {
     const lighthouse = JSON.parse(await fs.readFile(`${outputPath}.report.json`, 'utf8'));
     report.lighthouse[mode] = { lighthouseVersion: lighthouse.lighthouseVersion, fetchTime: lighthouse.fetchTime, finalUrl: lighthouse.finalDisplayedUrl || lighthouse.finalUrl, scores: Object.fromEntries(Object.entries(lighthouse.categories).map(([name, category]) => [name, Math.round(category.score * 100)])), metrics: Object.fromEntries(['first-contentful-paint','largest-contentful-paint','cumulative-layout-shift','total-blocking-time','speed-index'].map(id => [id, { value: lighthouse.audits[id].numericValue, display: lighthouse.audits[id].displayValue }])), configSettings: lighthouse.configSettings, warnings: lighthouse.runWarnings, runtimeError: lighthouse.runtimeError || null };
     assert.ok(!lighthouse.runtimeError, `${mode}: Lighthouse completed`);
-    assert.equal(lighthouse.audits['label-content-name-mismatch'].score, 1, `${mode}: visible labels must match accessible names`);
+    const labelAudit = lighthouse.audits['label-content-name-mismatch'];
+    assert.ok(labelAudit.score === 1 || labelAudit.scoreDisplayMode === 'notApplicable', `${mode}: visible labels must match accessible names`);
   }
   report.result = 'passed';
 } catch (error) {
